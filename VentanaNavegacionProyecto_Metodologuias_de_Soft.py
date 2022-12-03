@@ -137,10 +137,16 @@ var4 = tk.StringVar()
 date = BDOperaciones()
 def insert():
     root2 = tk.Toplevel()
-    tk.Entry(root2, textvariable=var1 , font=('Comic Sans MS', 12),highlightbackground = "DarkOrchid1", highlightcolor= "green2", highlightthickness=5).grid(column=0,row=0)
-    tk.Entry(root2, textvariable=var2 , font=('Comic Sans MS', 12),highlightbackground = "DarkOrchid1", highlightcolor= "green2", highlightthickness=5).grid(column=0,row=1)
-    tk.Entry(root2, textvariable=var3 , font=('Comic Sans MS', 12),highlightbackground = "DarkOrchid1", highlightcolor= "green2", highlightthickness=5).grid(column=0,row=2)
-    tk.Entry(root2, textvariable=var4 , font=('Comic Sans MS', 12),highlightbackground = "DarkOrchid1", highlightcolor= "green2", highlightthickness=5).grid(column=0,row=3)
+    tk.Label(root2, text = 'Insertar COD de las variables definidas',fg='navy', bg ='white', font=('Rockwell',11,'bold')).grid(column=0,row=0, pady=15, padx=10)
+    tk.Label(root2, text = 'PROV_COD',fg='navy', bg ='white', font=('Rockwell',13,'bold')).grid(column=0,row=1, pady=15)
+    tk.Label(root2, text = 'CANT_COD',fg='navy', bg ='white', font=('Rockwell',13,'bold')).grid(column=0,row=2, pady=15)
+    tk.Label(root2, text = 'PARR_COD',fg='navy', bg ='white', font=('Rockwell',13,'bold')).grid(column=0,row=3, pady=15)
+    tk.Label(root2, text = 'COLE_COD',fg='navy', bg ='white', font=('Rockwell',13,'bold')).grid(column=0,row=4, pady=15)
+
+    tk.Entry(root2, textvariable=var1 , font=('Comic Sans MS', 12),highlightbackground = "DarkOrchid1", highlightcolor= "green2", highlightthickness=5).grid(column=1,row=1)
+    tk.Entry(root2, textvariable=var2 , font=('Comic Sans MS', 12),highlightbackground = "DarkOrchid1", highlightcolor= "green2", highlightthickness=5).grid(column=1,row=2)
+    tk.Entry(root2, textvariable=var3 , font=('Comic Sans MS', 12),highlightbackground = "DarkOrchid1", highlightcolor= "green2", highlightthickness=5).grid(column=1,row=3)
+    tk.Entry(root2, textvariable=var4 , font=('Comic Sans MS', 12),highlightbackground = "DarkOrchid1", highlightcolor= "green2", highlightthickness=5).grid(column=1,row=4)
     tk.Button(root2,command= agregar_datos, text='REGISTRAR', font=('Arial',10,'bold'), bg='magenta2').grid(column=3,row=6, pady=10, padx=4)
 
 def agregar_datos():
@@ -158,6 +164,7 @@ def agregar_datos():
 # set y-coordinate of Navbar widgets:
 y = 80
 # option in the navbar:
+
 options = ["Profile", "Settings", "Help", "About", "Feedback"]
 tk.Button(navRoot, text="Insertar Data",command=insert, font="BahnschriftLight 15", bg="gray17", fg=color["orange"], activebackground="gray17", activeforeground="green", bd=0).place(x=25, y=60)
 tk.Button(navRoot, text="Buscar Data", font="BahnschriftLight 15", bg="gray17", fg=color["orange"], activebackground="gray17", activeforeground="green", bd=0).place(x=25, y=100)
